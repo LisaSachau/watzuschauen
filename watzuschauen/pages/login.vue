@@ -40,7 +40,7 @@
             password: password.value,
         })
         if (error) throw error
-        router.push("/")
+        router.push("/intern/index")
     } catch (error) {
         errorMsg.value = error.message
     }
