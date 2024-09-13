@@ -1,6 +1,6 @@
 <template>
     <div>
-
+        Hier kommen später Bilder rein yo
     </div>
 </template>
 
