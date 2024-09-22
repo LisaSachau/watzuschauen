@@ -23,11 +23,8 @@
             
 
              else {
-                console.log('Update erfolgreich:', data);
                 successMsg.value = "Ihre Daten wurden gespeichert";
-                console.log(data.publicUrl)
                 imageUrl.value = data.publicUrl
-                console.log(imageUrl.value)
             } 
             } catch (error) {
             console.error('Fehler: ', error.message);

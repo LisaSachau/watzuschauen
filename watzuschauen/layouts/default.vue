@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="flex flex-col min-h-screen">
         <header class="p-4 bg-gradient-to-r from-teal-600/50 from-10% via-emerald-600/50 via-30% to-rose-700/50 to-90%">
             <Navbar/>
         </header>
-        <div class="pt-4 pb-4 bg-emerald-50">
+        <div class="flex-grow pt-4 pb-4 bg-emerald-50">
         <slot>
         </slot>
         </div>

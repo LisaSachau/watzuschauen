@@ -53,7 +53,7 @@ async function showfotos() {
     const publicUrls = await Promise.all(files.value.map(async (file) => {
       const { data, error } = await supabase
         .storage
-        .from('fotos')
+        .from('fotos_homepage')
         .getPublicUrl(file.name); // Hole die öffentliche URL für jede Datei
 
       if (error) {
@@ -68,9 +68,7 @@ async function showfotos() {
 
     // Setze die öffentlichen URLs in die files-Variable
     files.value = publicUrls;
-    console.log(files.value); // Ausgabe der Dateien mit URLs
   } catch (error) {
-    console.error('Fehler beim Abrufen der öffentlichen URLs:', error.message);
     errorMsg.value = `Fehler beim Abrufen der öffentlichen URLs: ${error.message}`;
   }
 }
