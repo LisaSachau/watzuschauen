@@ -2,9 +2,11 @@
   <div>
     <!-- Buttons zum Auswählen der richtigen Upload-Oberfläche -->
     <div class="flex justify-center">
-      <span class="space-x-10 p-4"><button @click="selectModeHome" class="bg-green-200 rounded hover:bg-green-500 border-2 border-green-400 shadow">Home-Page</button>
-        <button @click="selectModeNatur" class="bg-green-200 rounded hover:bg-green-500 border-2 border-green-400 shadow">Natur-Page</button>
-        <button @click="selectModeDenkmal" class="bg-green-200 rounded hover:bg-green-500 border-2 border-green-400 shadow">Denkmal-Page</button></span>
+      <span class="space-x-10 p-4">
+        <NuxtLink to="/intern/" class="bg-amber-200 rounded hover:bg-amber-500 border-2 border-amber-400 shadow">Zurück</NuxtLink>
+        <button @click="selectModeHome" class="bg-green-200 rounded hover:bg-green-500 border-2 border-green-400 shadow" :class="mode === 'home' ? 'bg-green-600' : 'bg-green-200'">Home-Page</button>
+        <button @click="selectModeNatur" class="bg-green-200 rounded hover:bg-green-500 border-2 border-green-400 shadow" :class="mode === 'natur' ? 'bg-green-600' : 'bg-green-200'">Natur-Page</button>
+        <button @click="selectModeDenkmal" class="bg-green-200 rounded hover:bg-green-500 border-2 border-green-400 shadow" :class="mode === 'denkmal' ? 'bg-green-600' : 'bg-green-200'">Denkmal-Page</button></span>
     </div>
     <div class="flex justify-center">
     <div v-show="mode === ''" class="p-4 space-y-2">

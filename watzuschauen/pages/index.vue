@@ -15,7 +15,7 @@
         try{
         const { data, error } = await supabase
             .storage
-            .from('fotos')
+            .from('fotos_natur')
             .getPublicUrl("Fluss_mit_Wolken.jpg")
             if (error) {
                 throw error;
